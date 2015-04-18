@@ -1243,7 +1243,9 @@ header > h2 {
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #6baded;
-		//background-image: url("images/overlay.png"), url("../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("../images/chicago_1.jpg");
+        //background-image: url("images/overlay.png"), url("../images/7235917968_e0bd07f175_b.jpg");
+        //background-image: url("../images/6328004365_2396df1460_o.jpg");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
@@ -1471,11 +1473,12 @@ header > h2 {
 			//background: rgba(52, 27, 43, 0.5);
 			color: white;
 			display: inline-block;
-			opacity: 1;
+			opacity: .8;
 			padding: 3em;
 			text-align: center;
             border-style: solid;
             border-width: 1px;
+            background: #707277;
 		}
 
 			#banner .inner header {
