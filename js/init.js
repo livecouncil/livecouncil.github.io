@@ -105,5 +105,70 @@
 			}
 
 	});
+    
+    
+    $(function() { //shorthand document.ready function
+    $('#emailBetaSignUp').on('submit', function(e) { //use on if jQuery 1.7+
+        console.log("entered");
+        e.preventDefault();  //prevent form from submitting
+        var data = $("#emailBetaSignUp :input").serializeArray();
+        console.log("data"+data); //use the console for debugging, F12 in Chrome, not alerts
+        
+        toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-bottom-center",
+  "preventDuplicates": true,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "225000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+        $.ajax({
+    url: "http://nodejs-lcemail.rhcloud.com/emailSignup",
+ 
+    // The name of the callback parameter, as specified by the YQL service
+    jsonp: "callback",
+    jsonpCallback: "emailSignUpBetaFn",
+    method:"POST",
+    method:'post',
+ 
+    // Tell jQuery we're expecting JSONP
+    dataType: "jsonp",
+ 
+    // Tell YQL what we want and that we want JSON
+    data: data,
+ 
+    // Work with the response
+    success: function( response ) {
+        console.log( response ); // server response
+        toastr["success"]("Thank you for signing up!")
+    }
+});
+        
+        
+        
+    });
+});
+    
+    
+    
+    
+
+
+    
+    
 
 })(jQuery);
+
+function emailSignUpBetaFn(response)
+{
+    $("#emailBetaSignUp #emailAddr").val("");
+}

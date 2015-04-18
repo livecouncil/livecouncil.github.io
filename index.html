@@ -11,11 +11,14 @@
         <script src="js/jquery.scrollgress.min.js"></script>         
         <script src="js/skel.min.js"></script>         
         <script src="js/skel-layers.min.js"></script>         
-        <script src="js/init.js"></script>         
+        <script src="js/init.js"></script>        
+        <script src="toastr/toastr.min.js"></script>
+        <link rel="stylesheet" href="toastr/toastr.min.css"/>  
         <noscript> 
             <link rel="stylesheet" href="css/skel.css"/>             
             <link rel="stylesheet" href="css/style.css"/>             
-            <link rel="stylesheet" href="css/style-wide.css"/>             
+            <link rel="stylesheet" href="css/style-wide.css"/>  
+            <link rel="stylesheet" href="toastr/toastr.min.css"/>  
         </noscript>         
         <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->         
     </head>     
@@ -174,10 +177,10 @@
         <section id="cta"> 
             <h2>Sign up for beta access</h2> 
             <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p> 
-            <form> 
+            <form id="emailBetaSignUp" method="post"> 
                 <div class="row uniform 50%"> 
                     <div class="8u 12u(mobilep)"> 
-                        <input type="email" name="email" id="email" placeholder="Email Address"/>                         
+                        <input type="email" name="emailAddr" id="emailAddr" placeholder="Email Address"/>                         
                     </div>                     
                     <div class="4u 12u(mobilep)"> 
                         <input type="submit" value="Sign Up" class="fit"/>                         
@@ -212,4 +215,7 @@
             </ul>             
         </footer>         
     </body>     
+    <script>
+    
+    </script>
 </html>
