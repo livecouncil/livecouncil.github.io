@@ -1473,7 +1473,7 @@ header > h2 {
 			//background: rgba(52, 27, 43, 0.5);
 			color: white;
 			display: inline-block;
-			opacity: .8;
+			opacity: 1;
 			padding: 3em;
 			text-align: center;
             border-style: solid;
