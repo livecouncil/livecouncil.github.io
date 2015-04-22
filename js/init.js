@@ -332,7 +332,7 @@
 
                 // The name of the callback parameter, as specified by the YQL service
                 jsonp: "callback",
-                jsonpCallback: "emailSignUpBetaFn",
+                jsonpCallback: "contactUsFn",
                 method: "POST",
                 method: 'post',
 
@@ -376,6 +376,9 @@ $(window).load(function () {
 
 function emailSignUpBetaFn(response) {
     $("#emailBetaSignUp #emailAddr").val("");
+}
+function contactUsFn(response) {
+    $("#contactUs")[0].reset();
 }
 $(document).ready(function () {
     //tl.pg.init({ /* optional preferences go here */ });
