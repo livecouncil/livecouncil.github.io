@@ -345,7 +345,7 @@
                 // Work with the response
                 success: function (response) {
                     console.log(response); // server response
-                    console.log("second");
+                    $("#contactUs")[0].reset();
                     toastr["success"]("Thank you for signing up!")
                 }
             });
