@@ -345,6 +345,7 @@
                 // Work with the response
                 success: function (response) {
                     console.log(response); // server response
+                    console.log("second");
                     toastr["success"]("Thank you for signing up!")
                 }
             });
@@ -378,7 +379,8 @@ function emailSignUpBetaFn(response) {
     $("#emailBetaSignUp #emailAddr").val("");
 }
 function contactUsFn(response) {
-    $("#contactUs")[0].reset();
+    //$("#contactUs")[0].reset();
+    console.log("first");
 }
 $(document).ready(function () {
     //tl.pg.init({ /* optional preferences go here */ });
